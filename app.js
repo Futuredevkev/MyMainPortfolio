@@ -1,3 +1,9 @@
+
+
+
+
+
+
 let words = document.querySelectorAll(".word");
 words.forEach((word)=>{
     let letters = word.textContent.split("");
@@ -122,3 +128,21 @@ scrollBottom.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
+
+
+//form 
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault()
+  
+    let formData = new FormData(this);
+    formData.append('service_id', 'service_08hg839');
+    formData.append('template_id', 'template_p329mwy');
+    formData.append('user_id', 'HuZVPu5l8ymzemFjq');
+    const url = "https://api.emailjs.com/api/v1.0/email/send-form"
+    fetch(url, {
+      method: "POST",
+      body: formData
+    }).then(data => alert('Mensaje enviado correctamente...'))
+     .catch(data => alert('Error'))
+  });
