@@ -572,6 +572,11 @@ color: var(--bg-color);
     animation: boostrap 6s;
  }
 
+ .skill-bar .bar .sass {
+    width: 70%;
+    animation: sass 7s;
+ }
+
 
  /* skill right */
 
@@ -911,6 +916,15 @@ color: var(--bg-color);
            width: 80%;
        }
     }
+
+    @keyframes sass {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 70%;
+        }
+     }
    
    
     @keyframes glow {
