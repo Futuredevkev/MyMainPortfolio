@@ -130,8 +130,9 @@ const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
 
 
-//form 
 
+
+//form 
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault()
   
